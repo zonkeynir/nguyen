@@ -7,11 +7,13 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    mini_portile (0.5.3)
-    minitest (5.5.1)
-    nokogiri (1.6.1)
-      mini_portile (~> 0.5.0)
-    rake (10.1.0)
+    mini_portile2 (2.1.0)
+    minitest (5.9.0)
+    nokogiri (1.6.8)
+      mini_portile2 (~> 2.1.0)
+      pkg-config (~> 1.1.7)
+    pkg-config (1.1.7)
+    rake (11.1.2)
 
 PLATFORMS
   ruby
@@ -20,3 +22,6 @@ DEPENDENCIES
   minitest
   nguyen!
   rake
+
+BUNDLED WITH
+   1.12.5

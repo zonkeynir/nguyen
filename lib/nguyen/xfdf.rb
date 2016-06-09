@@ -23,7 +23,17 @@ module Nguyen
             @fields.each do |field, value|
               xml.field(name: field) {
                 if value.is_a? Array
-                  value.each { |item| xml.value(item.to_s) }
+                  value.each { |item| xml.value(item.to_s) }               
+                elsif value.is_a? Hash
+                     value.each do |field, value|
+    xml.field(name: field) {
+            if value.is_a? Array
+                  value.each { |item| xml.value(item.to_s) }            
+            else
+      xml.value(value.to_s)
+            end
+    }
+                    end
                 else
                   xml.value(value.to_s)
                 end
